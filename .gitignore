@@ -1,0 +1,12 @@
+env/
+.cache/
+site/
+*.pyc
+__pycache__/
+.DS_Store
+.venv/
+venv/
+node_modules/
+.vscode/
+.idea/
+.gemini/

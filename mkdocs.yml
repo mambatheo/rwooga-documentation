@@ -1,0 +1,132 @@
+site_name: Rwooga Documentation
+site_description: Official Full-Stack Documentation for Rwooga 
+site_author: Rwooga Software Engineers Team
+site_url: https://rwooga.docs.example.com
+
+theme:
+  name: modern       
+  favicon: assets/favicon.png
+  font:
+    text: Inter 
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.footer
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - toc.follow
+    - announce.dismiss
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+ 
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      title: On this page
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.mark
+  - pymdownx.caret
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/hjsk
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/hjsk
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: Thanks for letting us know.
+
+nav:
+    - Home: 
+        - index.md
+        - System Architecture : start/system.md
+        - Technology Stack:
+          - Backend (API Server): start/backend_stack.md
+          - Frontend: start/frontend_stack.md
+    
+    - Backend Architecture:
+        - Accounts App: apps/accounts.md
+        - Payments App: apps/payments.md
+        - Products App: apps/products.md
+        - Orders App: apps/orders.md
+        - Utils App: apps/utils.md
+    - Frontend Architecture:
+        - Public Pages (No login required): pages/unprotected.md
+        - Authentication Pages: pages/authentication.md
+        - Client Portal Pages: pages/Login Required.md
+        - Admin Dashboard (Admin role required): pages/Admin Page.md
+        - Reusable UI Components: pages/UI Components.md
+        - Service Layer (API Integration): pages/API Integration.md
+        - State Management (Redux Store): pages/Redux Store.md
+    - Full API Reference:
+        - Authentication & Profile: API/Auth Endpoints.md
+        - Products & Categories: API/Products Endpoints.md
+        - Orders & Returns: API/Orders Endpoints.md
+        - Payments & MoMo: API/Payments Endpoints.md
+    - Security & Infrastructure:
+        - User Roles & Permissions: security/User Permissions.md
+        - Network & CORS Security: security/CORS & Network Security.md
+
