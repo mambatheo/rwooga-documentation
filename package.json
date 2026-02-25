@@ -1,7 +1,10 @@
 {
   "name": "rwooga-docs",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
-    "build": "mkdocs build"
+    "build": "pip install --break-system-packages -r requirements.txt && mkdocs build"
   }
 }
