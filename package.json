@@ -5,6 +5,6 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "pip install --break-system-packages -r requirements.txt && mkdocs build"
+    "build": "python3 -m pip install --break-system-packages -r requirements.txt && python3 -m mkdocs build"
   }
 }
